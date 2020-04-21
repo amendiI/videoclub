@@ -15,6 +15,8 @@ public class TestJonathan {
 		System.out.println(jo.getId());
 		System.out.println(jo.getPrenom());
 		System.out.println(jo.getAdresse().toString());
+		Civilite civil = Civilite.MLLE;	
 		
+		System.out.println(civil.getLabel());
 	}
 }
