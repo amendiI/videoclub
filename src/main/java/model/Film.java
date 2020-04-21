@@ -11,18 +11,7 @@ public class Film {
 	ArrayList<Realisation> realisations;
 	HashSet<Article> articles;
 	
-	
-	
-	
-	
-	
-
-
-
-	public Film() {
-	}
-
-
+	public Film() {}
 
 	public Film(Integer id, String titre, Date dateDeSortie) {
 		this.id = id;
@@ -89,8 +78,6 @@ public class Film {
 		
 	}
 
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -102,8 +89,6 @@ public class Film {
 		result = prime * result + ((titre == null) ? 0 : titre.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -140,6 +125,12 @@ public class Film {
 		} else if (!titre.equals(other.titre))
 			return false;
 		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "Film [id=" + id + ", titre=" + titre + ", dateDeSortie=" + dateDeSortie + ", realisations="
+				+ realisations + ", articles=" + articles + "]";
 	}
 	
 	

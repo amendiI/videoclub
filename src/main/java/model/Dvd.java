@@ -5,7 +5,6 @@ public class Dvd extends Article {
 	private Boolean bonus;
 	
 	
-	
 	public Dvd(Integer id, Integer nbDisque, Adherent emprinteur, Film film, Boolean bonus) {
 		super(id, nbDisque, emprinteur, film);
 		this.bonus = bonus;
@@ -17,6 +16,12 @@ public class Dvd extends Article {
 
 	public void setBonus(Boolean bonus) {
 		this.bonus = bonus;
+	}
+
+	@Override
+	public String toString() {
+		return "Dvd [bonus=" + bonus + ", id=" + id + ", nbDisque=" + nbDisque + ", emprunteur=" + emprunteur
+				+ ", film=" + film + "]";
 	}
 	
 	
