@@ -1,9 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+
 public class Realisateur {
 	private Integer id;
 	private String prenom;
 	private String nom;
+	ArrayList<Realisation> realisations;
 	
 	
 	
@@ -16,20 +19,19 @@ public class Realisateur {
 
 
 
-	public Realisateur(String prenom, String nom) {
-		this.prenom = prenom;
-		this.nom = nom;
-	}
-
-
 
 	public Realisateur(Integer id, String prenom, String nom) {
 		this.id = id;
 		this.prenom = prenom;
 		this.nom = nom;
+		this.realisations = new ArrayList<Realisation>();	}
+
+
+	
+	public void addRealisations(Realisation e) {
+		realisations.add(e);
 	}
-
-
+	
 	// Accesseurs
 	
 	public Integer getId() {
@@ -76,6 +78,7 @@ public class Realisateur {
 
 
 
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -83,8 +86,10 @@ public class Realisateur {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((nom == null) ? 0 : nom.hashCode());
 		result = prime * result + ((prenom == null) ? 0 : prenom.hashCode());
+		result = prime * result + ((realisations == null) ? 0 : realisations.hashCode());
 		return result;
 	}
+
 
 
 
@@ -112,9 +117,16 @@ public class Realisateur {
 				return false;
 		} else if (!prenom.equals(other.prenom))
 			return false;
+		if (realisations == null) {
+			if (other.realisations != null)
+				return false;
+		} else if (!realisations.equals(other.realisations))
+			return false;
 		return true;
 	}
-	
+
+
+
 	
 	
 	
