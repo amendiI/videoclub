@@ -138,11 +138,6 @@ public class Adherent {
 		this.articles.add(article);
 	}
 
-	@Override
-	public String toString() {
-		return "Adherent [id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", civilite=" + civilite + ", adresse="
-				+ adresse + ", articles=" + articles + "]";
-	}
 	
 	
 }
