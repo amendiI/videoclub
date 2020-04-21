@@ -2,31 +2,42 @@ package model;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashSet;
 
 public class Film {
 	private Integer id;
 	private String titre;
 	private Date dateDeSortie;
-	ArrayList<Realisation> realisations = new ArrayList<Realisation>();
+	ArrayList<Realisation> realisations;
+	HashSet<Article> articles;
 	
 	
 	
+	
+	
+	
+
+
+
 	public Film() {
 	}
 
-
-	public Film(String titre, Date dateDeSortie) {
-		this.titre = titre;
-		this.dateDeSortie = dateDeSortie;
-	}
 
 
 	public Film(Integer id, String titre, Date dateDeSortie) {
 		this.id = id;
 		this.titre = titre;
 		this.dateDeSortie = dateDeSortie;
+		this.articles = new HashSet<Article>();
+		this.realisations = new ArrayList<Realisation>();
 	}
 	
+	public void addArticles(Article e) {
+		articles.add(e);
+	}
+	public void addRealisations(Realisation f) {
+		realisations.add(f);
+	}
 
 
 	public Integer getId() {
