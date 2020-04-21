@@ -32,7 +32,7 @@ public class Article {
 	}
 
 
-	public Adherent getEmprinteur() {
+	public Adherent getEmprunteur() {
 		return emprunteur;
 	}
 
