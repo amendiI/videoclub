@@ -1,0 +1,12 @@
+DB:
+
+Adresse + adhérent, en java 2 classes
+Article, écrit en italique => classe abstraite en 2 ss classes: DVD + blueray
+table film
+table réalisateur
+
+1 article = 1 adherent; , donc clé étrangere dans table article qui relie a l'adhérent qui a emprunté
+Dans article 2eme clé etrngere pour clé film
+
+table réalisation, table gérant id film + id realisateur, clé = combinaison des 2 clés + les 2 foreignkey + dao ppur traitement
+
