@@ -18,6 +18,7 @@ public class Adresse {
 		this.ville = ville;
 	}
 
+	public Adresse() {};
 
 	
 
