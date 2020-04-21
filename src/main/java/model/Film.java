@@ -1,11 +1,13 @@
 package model;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Film {
 	private Integer id;
 	private String titre;
 	private Date dateDeSortie;
+	ArrayList<Realisation> realisations = new ArrayList<Realisation>();
 	
 	
 	
@@ -57,15 +59,30 @@ public class Film {
 	}
 	
 	
-	//public Realisation getRealisations(){}
+	public ArrayList<Realisation> getRealisations(){
+		return null;
+	}
 	
-	//public void setRealisations(){}
+	public void setRealisations(ArrayList<Realisation> realisations) {
+		this.realisations = realisations;
+	}
+
 	
-	//public Article getArticles(){}
 	
-	//public void setArticles(){}
+	public Article getArticles(){
+		return null;
+		
+	}
+	
+	public void setArticles(){
+		
+	}
+	
+	
 	
 
+
+	
 
 	@Override
 	public int hashCode() {
