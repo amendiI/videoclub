@@ -1,6 +1,6 @@
 package model;
 
-public class Article {
+public abstract class Article {
 	
 	protected Integer id;
 	protected Integer nbDisque;

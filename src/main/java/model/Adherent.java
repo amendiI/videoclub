@@ -7,7 +7,9 @@ import java.util.Set;
 
 public class Adherent {
 
+	
 	// attributs
+	
 	private Integer id;
 	private String prenom;
 	private String nom;
@@ -15,11 +17,9 @@ public class Adherent {
 	private Adresse adresse;
 	private ArrayList<Article> articles; // Create an ArrayList object
 
+	
 	// constructeurs
 
-
-	
-	
 	public Adherent(Integer id, String prenom, String nom, Civilite civilite, Adresse adresse) {
 		this.id = id;
 		this.prenom = prenom;
@@ -31,17 +31,12 @@ public class Adherent {
 
 	public Adherent() {};
 
-
-
-
-
+	
 	// methodes
 
 	public Integer getId() {
 		return id;
 	}
-
-
 
 	public void setId(Integer id) {
 		this.id = id;
@@ -75,10 +70,6 @@ public class Adherent {
 		this.adresse=adresse;
 	}
 
-
-
-
-
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -91,8 +82,6 @@ public class Adherent {
 		result = prime * result + ((prenom == null) ? 0 : prenom.hashCode());
 		return result;
 	}
-
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -149,4 +138,11 @@ public class Adherent {
 		this.articles.add(article);
 	}
 
+	@Override
+	public String toString() {
+		return "Adherent [id=" + id + ", prenom=" + prenom + ", nom=" + nom + ", civilite=" + civilite + ", adresse="
+				+ adresse + ", articles=" + articles + "]";
+	}
+	
+	
 }
